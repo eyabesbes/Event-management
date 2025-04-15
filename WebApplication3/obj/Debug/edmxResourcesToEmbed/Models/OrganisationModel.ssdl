@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrganisationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\EYA BESBES\SOURCE\REPOS\WEBAPPLICATION3\WEBAPPLICATION3\APP_DATA\GESTIONEVENT.MDF.dbo.Organisation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Organisation">
+    <Key>
+      <PropertyRef Name="IdEvent" />
+      <PropertyRef Name="IdOrganisateur" />
+    </Key>
+    <Property Name="IdEvent" Type="int" Nullable="false" />
+    <Property Name="IdOrganisateur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="OrganisationModelStoreContainer">
+    <EntitySet Name="Organisation" EntityType="Self.Organisation" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Organisation].[IdEvent] AS [IdEvent], 
+    [Organisation].[IdOrganisateur] AS [IdOrganisateur]
+    FROM [dbo].[Organisation] AS [Organisation]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

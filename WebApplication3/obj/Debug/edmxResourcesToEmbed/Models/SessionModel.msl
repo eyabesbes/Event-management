@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SessionModelStoreContainer" CdmEntityContainer="GestionEventEntities5">
+    <EntitySetMapping Name="Session">
+      <EntityTypeMapping TypeName="SessionModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="IdSession" ColumnName="IdSession" />
+          <ScalarProperty Name="IdSpeaker" ColumnName="IdSpeaker" />
+          <ScalarProperty Name="sujet" ColumnName="sujet" />
+          <ScalarProperty Name="horaire" ColumnName="horaire" />
+          <ScalarProperty Name="IdEvent" ColumnName="IdEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

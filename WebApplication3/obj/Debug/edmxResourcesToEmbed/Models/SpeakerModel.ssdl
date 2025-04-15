@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SpeakerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Speaker">
+    <Key>
+      <PropertyRef Name="IdSpeaker" />
+    </Key>
+    <Property Name="IdSpeaker" Type="int" Nullable="false" />
+    <Property Name="nomSpeaker" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numTel" Type="int" Nullable="false" />
+    <Property Name="adresse" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SpeakerModelStoreContainer">
+    <EntitySet Name="Speaker" EntityType="Self.Speaker" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

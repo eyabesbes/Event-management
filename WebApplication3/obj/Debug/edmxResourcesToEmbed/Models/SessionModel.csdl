@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SessionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="IdSession" />
+    </Key>
+    <Property Name="IdSession" Type="Int32" Nullable="false" />
+    <Property Name="IdSpeaker" Type="Int32" Nullable="false" />
+    <Property Name="sujet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="horaire" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdEvent" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GestionEventEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Session" EntityType="Self.Session" />
+  </EntityContainer>
+</Schema>

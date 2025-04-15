@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication3.Models.Speaker>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomSpeaker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numTel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adresse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomSpeaker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numTel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adresse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdSpeaker }) |
+            @Html.ActionLink("Details", "Detail", new { id=item.IdSpeaker }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdSpeaker })
+        </td>
+    </tr>
+}
+
+</table>

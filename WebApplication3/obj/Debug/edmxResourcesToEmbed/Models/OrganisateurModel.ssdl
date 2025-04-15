@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrganisateurModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Organisateur">
+    <Key>
+      <PropertyRef Name="IdOrganisateur" />
+    </Key>
+    <Property Name="IdOrganisateur" Type="int" Nullable="false" />
+    <Property Name="nomOrganisateur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numTel" Type="int" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="adresse" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="OrganisateurModelStoreContainer">
+    <EntitySet Name="Organisateur" EntityType="Self.Organisateur" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

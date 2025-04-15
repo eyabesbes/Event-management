@@ -1,0 +1,79 @@
+﻿
+@model IEnumerable<WebApplication3.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>Index</div>
+
+<p class="text-right">
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if (ViewBag.Message != null)
+{
+
+    <div class="alert alert-success" role="alert">
+        @ViewBag.Message
+    </div>
+}   <table class="table">
+        <tr>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.nomEvent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lieu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cible)
+            </th>
+            <th></th>
+        </tr>
+
+
+    @if (Model != null && Model.Count() > 0)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.nomEvent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lieu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cible)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IdEvent }) |
+                    @Html.ActionLink("Details", "Detail", new { id = item.IdEvent }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdEvent })
+                </td>
+            </tr>
+
+        }
+    }
+    else
+    {
+        <td colspan="4" class="text-center"><b>No Data Available . Please Add Data By CLick On Create Button</b></td>
+
+    }
+</table>

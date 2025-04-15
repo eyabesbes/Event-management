@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OrganisationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Organisation">
+    <Key>
+      <PropertyRef Name="IdEvent" />
+      <PropertyRef Name="IdOrganisateur" />
+    </Key>
+    <Property Name="IdEvent" Type="Int32" Nullable="false" />
+    <Property Name="IdOrganisateur" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GestionEventEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Organisation" EntityType="Self.Organisation" />
+  </EntityContainer>
+</Schema>

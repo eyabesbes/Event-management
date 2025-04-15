@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OrganisateurModelStoreContainer" CdmEntityContainer="GestionEventEntities1">
+    <EntitySetMapping Name="Organisateur">
+      <EntityTypeMapping TypeName="OrganisateurModel.Organisateur">
+        <MappingFragment StoreEntitySet="Organisateur">
+          <ScalarProperty Name="IdOrganisateur" ColumnName="IdOrganisateur" />
+          <ScalarProperty Name="nomOrganisateur" ColumnName="nomOrganisateur" />
+          <ScalarProperty Name="numTel" ColumnName="numTel" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
